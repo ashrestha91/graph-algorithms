@@ -1,8 +1,0 @@
-Abhinav Shrestha
-
-Run programs by inputting name of matrix file(s).
-Will write output to searched.txt and path.txt.
-
-e.g.
-python BFS.py arpanet.txt
-python Astar.py arpanet.txt arpanet.heuristic.txt
