@@ -1,0 +1,12 @@
+Both of these files run as games if you type:
+python TicTacToe.py TicTacToe.txt
+python WeightedTTT.py WeightedTTT.txt
+
+Alternatively, you can watch 2 AI players play by running (feature needs to be added for TicTacToe.py):
+python WeightedTTT.py WeightedTTT.txt auto
+
+TicTacToe.py has the output formatted assuming regular TicTacToe.
+
+TicTacToe.py will be soon updated to use the same board format as WeightedTTT.py.
+
+As this algorithm grows exponentially, I will be attempting to improve the performance of this algorithm to work on larger size games.  The main methods I am considering are writing C extensions, and memoizing boards to eliminate the need to compute transposed games.

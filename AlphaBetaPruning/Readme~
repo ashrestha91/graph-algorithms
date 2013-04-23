@@ -1,0 +1,39 @@
+Abhinav Shrestha
+
+Both of these files run as games if you type:
+python HW2.py TicTacToe.txt
+python HW2-ExtraCredit.py ExtraCredit.txt
+
+Alternatively, you can watch 2 AI players play, what I believe should be an optimal game, by running:
+python HW2-ExtraCredit.py ExtraCredit.txt auto
+
+HW2.py has the output formatted assuming regular TicTacToe.  It will look awkward otherwise.
+
+The two files implement the board state differently, since I didn't think of the second method until later on. They are described in the respective files.
+
+
+The result for the extracredit looks strange, since neither player takes the free point at 1 until the last turn.  I haven't combed through the game to check whether this is actually the resolution to this game, but it's certainly surprising.
+
+Move #1
+1|X|3|4|5|6|7|8|9|10|
+Move #2
+1|X|O|4|5|6|7|8|9|10|
+Move #3
+1|X|O|4|5|6|7|8|9|X|
+Move #4
+1|X|O|4|5|6|7|8|O|X|
+Move #5
+1|X|O|4|5|6|7|X|O|X|
+Move #6
+1|X|O|4|5|6|O|X|O|X|
+Move #7
+1|X|O|4|5|X|O|X|O|X|
+Move #8
+1|X|O|4|O|X|O|X|O|X|
+Move #9
+1|X|O|X|O|X|O|X|O|X|
+Move #10
+O|X|O|X|O|X|O|X|O|X|
+Final scores:
+Player 1: 0
+Player 2: 1
