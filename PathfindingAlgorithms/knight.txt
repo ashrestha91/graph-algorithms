@@ -1,0 +1,29 @@
+# This graph represents the moves of the knight chess piece from one corner of a 5x5 chessboard to the opposite corner.
+# Each node in the graph is one of the 25 possible positions of the knight on the board, starting from the top-left corner, moving left-to-right and top-to-bottom to the bottom-right corner.
+# Your algorithms should find the least-cost path from the top-left to the bottom-right corner.
+# 
+0 0 0 0 0 0 0 6 0 0 0 3 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 7 0 4 0 4 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 7 0 0 0 6 0 3 0 3 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 6 0 0 0 0 0 4 0 4 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 7 0 0 0 0 0 3 0 0 0 0 0 0 0 0 0 0 0
+0 0 7 0 0 0 0 0 0 0 0 0 7 0 0 0 4 0 0 0 0 0 0 0 0
+0 0 0 6 0 0 0 0 0 0 0 0 0 6 0 3 0 3 0 0 0 0 0 0 0
+6 0 0 0 7 0 0 0 0 0 6 0 0 0 7 0 4 0 4 0 0 0 0 0 0
+0 7 0 0 0 0 0 0 0 0 0 7 0 0 0 0 0 3 0 3 0 0 0 0 0
+0 0 6 0 0 0 0 0 0 0 0 0 6 0 0 0 0 0 4 0 0 0 0 0 0
+0 4 0 0 0 0 0 6 0 0 0 0 0 0 0 0 0 6 0 0 0 3 0 0 0
+3 0 3 0 0 0 0 0 7 0 0 0 0 0 0 0 0 0 7 0 4 0 4 0 0
+0 4 0 4 0 7 0 0 0 6 0 0 0 0 0 7 0 0 0 6 0 3 0 3 0
+0 0 3 0 3 0 6 0 0 0 0 0 0 0 0 0 6 0 0 0 0 0 4 0 4
+0 0 0 4 0 0 0 7 0 0 0 0 0 0 0 0 0 7 0 0 0 0 0 3 0
+0 0 0 0 0 0 3 0 0 0 0 0 7 0 0 0 0 0 0 0 0 0 7 0 0
+0 0 0 0 0 4 0 4 0 0 0 0 0 6 0 0 0 0 0 0 0 0 0 6 0
+0 0 0 0 0 0 3 0 3 0 6 0 0 0 7 0 0 0 0 0 6 0 0 0 7
+0 0 0 0 0 0 0 4 0 4 0 7 0 0 0 0 0 0 0 0 0 7 0 0 0
+0 0 0 0 0 0 0 0 3 0 0 0 6 0 0 0 0 0 0 0 0 0 6 0 0
+0 0 0 0 0 0 0 0 0 0 0 4 0 0 0 0 0 6 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 3 0 3 0 0 0 0 0 7 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 4 0 4 0 7 0 0 0 6 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 3 0 3 0 6 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 4 0 0 0 7 0 0 0 0 0 0 0

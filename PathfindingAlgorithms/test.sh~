@@ -1,0 +1,7 @@
+#!/usr/bin/sh
+python ($1) arpanet.txt
+cat searched.txt
+cat path.txt
+python ($1) knight.txt
+cat searched.txt
+cat path.txt

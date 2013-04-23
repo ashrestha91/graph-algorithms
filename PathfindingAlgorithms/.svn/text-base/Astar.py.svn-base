@@ -1,0 +1,122 @@
+import Queue
+import sets
+import sys
+import heapq
+
+#wrapper around heap
+#mostly just renames things
+class PriorityQ(object):
+    def __init__(self):
+        self.heap = []
+    def get(self):
+        return heapq.heappop(self.heap)
+    def put(self,priority,node,parent):
+        heapq.heappush(self.heap,(priority,node,parent))
+    def empty(self):
+        return (self.heap == []) 
+
+#reads input files into matrices
+#saved as 2-dimensional lists
+def parse_file():
+
+    f = open(sys.argv[1],'r')
+    incidence_matrix = file_to_matrix(f)
+    f.close()
+
+    f = open(sys.argv[2],'r')
+    heuristic_matrix = file_to_matrix(f)
+    f.close()
+
+    return incidence_matrix, heuristic_matrix
+
+#helper function to parse_file()
+#requires files are in proper format, i.e. n x n space delimited blocks of integers
+#with comments initiated by '#' at the beginning of the line
+def file_to_matrix(file_object):
+    result_matrix = []
+    for line in file_object.readlines():
+        if not(line[0] == '#' or line.strip() == ""):
+            line = line.split()
+            result_matrix.append(map(int,line))
+    return result_matrix
+
+#formats matrices for printing
+def matrix_format(mat):
+    result = ""
+    for row in mat:
+        result= result+str(row)+"\n"
+    return result
+
+#rebuild path iteratively, using a dictionary
+def rebuild(node, origins):
+    result = [node]
+    current = node
+    while(origins[current]!=None):
+        current = origins[current]
+        result.append(current)
+    result.reverse()
+    return result
+
+#A* algorithm
+def a_star(incid_mat, heur_mat, root, finish):
+    #intialize variables
+    closed_set = sets.Set() #places you've processed
+    open_set = PriorityQ() #"frontier", nodes to go to next, prioritized by cost+heuristic
+    origins = dict() #holds immediate parents to reconstruct path
+    visited_nodes = [] #nodes you've added to the priority queue, in order
+    costs = dict() #cost from root to node. If node is in costs, it's been added to the priority queue.  Not necessarily least cost, until node is added to closed_set
+
+    #base case
+    costs[0] = 0
+    origins[root] = None
+    open_set.put(costs[root],root,None)
+    costs[0] = 0
+    
+    #iterate
+    while(not(open_set.empty())):
+        """
+        Instead of updating priority, we just load up all child nodes that haven't been closed off.
+        So we only process it the first time, and ignore all future times it shows up.
+        Since a node will be processed and added to closed set if and only if it is the shortest path from root to the node,
+        this is still correct.
+        But we're sacrificing memory so we don't have to write a replace function
+        
+        The rest is standard.  Process the next node on the priority queue:
+        If it's the finish node (goal), rebuild the path, and return the path and nodes that have been visited.
+        Otherwise, add the children that haven't been processed to the priority queue, with priority = cost from root to the child + heuristic of child
+        """
+        score,node,parent = open_set.get()
+        if(node not in closed_set):
+            origins[node] = parent
+            visited_nodes.append(node)
+            if(node == finish):
+                return rebuild(node,origins),visited_nodes
+            closed_set.add(node)
+            node_children = [ index  for index, element in enumerate(incid_mat[node]) if element!=0 ]
+            for child in node_children:
+                temp_cost = costs[node]+incid_mat[node][child]
+                if(child not in closed_set):
+                    costs[child] = temp_cost
+                    open_set.put(costs[child]+heur_mat[child][finish],child,node)
+    return None
+
+def main():
+    #parse file
+    if len(sys.argv) < 3:
+        print "Error: Not enough inputs"
+        sys.exit()
+    incidence_matrix, heuristic_matrix = parse_file()
+    
+    #run algorihtm
+    path,searched = a_star(incidence_matrix,heuristic_matrix,0,len(incidence_matrix)-1)
+        
+    #print to file
+    output_path = open("path.txt",'w')
+    output_searched = open("searched.txt",'w')
+    
+    for node in path:
+        output_path.write(str(node)+'\n')
+    for node in searched:
+        output_searched.write(str(node)+'\n')
+
+main()

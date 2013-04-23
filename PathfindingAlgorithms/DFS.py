@@ -1,0 +1,90 @@
+"""
+Depth First Search, using a stack implementation.
+
+Takes an input of an n x n matrix of integers, representing the distance between nodes on a graph.  Uses stack first search to find a path from the node 1 to node n.
+
+Outputs the path to path.txt, and the nodes that were searched in searched.txt.
+"""
+
+
+import sets
+import sys
+
+#parse file into matrices
+#stored as lists of lists of integers
+#requires proper format
+def parse_file():
+    result_matrix = []
+    f = open(sys.argv[1],'r')
+    for line in f.readlines():
+        if not(line[0] == '#' or line.strip() == ""):
+            line = line.split()
+            result_matrix.append(map(int,line))
+    f.close()
+    return result_matrix
+
+#rebuild path from predecessors
+def rebuild(node, origins):
+    result = [node]
+    current = node
+    while(origins[current]!=None):
+        current = origins[current]
+        result.append(current)
+    result.reverse()
+    return result
+
+#algorithm
+def dfs(matrix,root,finish):
+    #intialize variables
+    upcoming_nodes = []
+    marked = sets.Set()
+    origins = dict()
+    visited_nodes = []
+
+    #base case
+    upcoming_nodes.append(root)
+    marked.add(root)
+    visited_nodes.append(root)
+    origins[root]=None
+
+    #iterate
+    while(not(upcoming_nodes ==[])):
+        """
+        Pop node off of stack
+        If it's the finish, rebuild the path and return it
+        Otherwise push children that haven't been put on the stack onto the stack  
+        """
+        node = upcoming_nodes.pop()
+
+        if (node == finish):
+            return rebuild(node,origins),visited_nodes
+
+        node_children = [ index  for index, element in enumerate(matrix[node]) if element!=0 ] #get nonzero edges, and store them as children
+        for child in node_children:           
+            if(child not in marked):
+                visited_nodes.append(child)
+                origins[child] = node
+                marked.add(child)
+                upcoming_nodes.append(child)
+    return None    
+
+def main():
+    #parse file
+    if len(sys.argv) < 2:
+        print "Error: Not enough inputs"
+        sys.exit()
+    incidence_matrix = parse_file()
+
+    #run algorithm
+    path,searched = dfs(incidence_matrix,0,len(incidence_matrix)-1)
+
+    #outputs
+    output_path = open("path.txt",'w')
+    output_searched = open("searched.txt",'w')
+    
+    for node in path:
+        output_path.write(str(node)+'\n')
+    for node in searched:
+        output_searched.write(str(node)+'\n')
+
+main()
