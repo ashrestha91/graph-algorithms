@@ -1,0 +1,41 @@
+Abhinav Shrestha
+Homework 5
+
+Run by:
+python ./frequentist.py
+
+Set to predict unknown manuscript with parameters optimized by cross-validation.
+
+Removing the most common words: 
+I tested it on values in range(0,20), and got the following values.
+6 has the highest accuracy, but given that removing 4 or 5 sharply decreases accuracy,
+I'm not convinced that this the best value.
+
+0 :  0.9
+1 :  0.933333333333
+2 :  0.933333333333
+3 :  0.933333333333
+4 :  0.733333333333
+5 :  0.7
+6 :  0.966666666667
+7 :  0.9
+8 :  0.9
+9 :  0.933333333333
+10 :  0.833333333333
+11 :  0.733333333333
+12 :  0.733333333333
+13 :  0.6
+14 :  0.7
+15 :  0.766666666667
+16 :  0.8
+17 :  0.766666666667
+18 :  0.766666666667
+19 :  0.733333333333
+
+Removing the final character 's' is also implemented (relies on /usr/share/dict/words)
+
+Used the frequentist approach.  We use the frequency of the words as the value for theta, and to compute the log likelihoods of each word.
+Gamma was chosen to be 2 via cross-validation.
+
+Results for unknown manuscripts are in Results
+Results for cross-validation to train gamma are in cv-results-n, where gamma = n*.25

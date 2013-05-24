@@ -1,0 +1,55 @@
+Results for unknown data:
+./federalist/unknown1.txt :
+loglikelihood for hamilton: -12805.7404829 
+loglikelihood for madison: -12726.9594779
+madison 
+
+./federalist/unknown2.txt :
+loglikelihood for hamilton: -8590.06514462 
+loglikelihood for madison: -8534.30487175
+madison 
+
+./federalist/unknown3.txt :
+loglikelihood for hamilton: -14739.1414911 
+loglikelihood for madison: -14580.2725697
+madison 
+
+./federalist/unknown4.txt :
+loglikelihood for hamilton: -14217.2472142 
+loglikelihood for madison: -14147.8392344
+madison 
+
+./federalist/unknown5.txt :
+loglikelihood for hamilton: -16728.936098 
+loglikelihood for madison: -16687.656091
+madison 
+
+./federalist/unknown6.txt :
+loglikelihood for hamilton: -15246.0611101 
+loglikelihood for madison: -15220.8993103
+madison 
+
+./federalist/unknown7.txt :
+loglikelihood for hamilton: -15721.1472304 
+loglikelihood for madison: -15678.524976
+madison 
+
+./federalist/unknown8.txt :
+loglikelihood for hamilton: -12077.7804355 
+loglikelihood for madison: -12025.8752586
+madison 
+
+./federalist/unknown9.txt :
+loglikelihood for hamilton: -17054.8865474 
+loglikelihood for madison: -17051.6339319
+madison 
+
+./federalist/unknown10.txt :
+loglikelihood for hamilton: -18518.3716686 
+loglikelihood for madison: -18457.1416332
+madison 
+
+./federalist/unknown11.txt :
+loglikelihood for hamilton: -23487.4352414 
+loglikelihood for madison: -23355.2433204
+madison 

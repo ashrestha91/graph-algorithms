@@ -1,0 +1,150 @@
+excluding ./federalist/madison1.txt : 
+loglikelihood for hamilton: -23168.9303234 
+loglikelihood for madison: -23113.7144595
+madison : True 
+
+excluding ./federalist/madison2.txt : 
+loglikelihood for hamilton: -16472.0811212 
+loglikelihood for madison: -16499.2412956
+hamilton : False 
+
+excluding ./federalist/madison3.txt : 
+loglikelihood for hamilton: -21048.6539702 
+loglikelihood for madison: -20975.8197035
+madison : True 
+
+excluding ./federalist/madison4.txt : 
+loglikelihood for hamilton: -25631.4851565 
+loglikelihood for madison: -25222.6672486
+madison : True 
+
+excluding ./federalist/madison5.txt : 
+loglikelihood for hamilton: -19929.1566553 
+loglikelihood for madison: -19724.6271803
+madison : True 
+
+excluding ./federalist/madison6.txt : 
+loglikelihood for hamilton: -23235.4478904 
+loglikelihood for madison: -22971.8256708
+madison : True 
+
+excluding ./federalist/madison7.txt : 
+loglikelihood for hamilton: -27397.9214851 
+loglikelihood for madison: -27321.2728784
+madison : True 
+
+excluding ./federalist/madison8.txt : 
+loglikelihood for hamilton: -21625.1718366 
+loglikelihood for madison: -21547.5415661
+madison : True 
+
+excluding ./federalist/madison9.txt : 
+loglikelihood for hamilton: -26435.6480385 
+loglikelihood for madison: -26178.9772014
+madison : True 
+
+excluding ./federalist/madison10.txt : 
+loglikelihood for hamilton: -22325.3878355 
+loglikelihood for madison: -22114.0914668
+madison : True 
+
+excluding ./federalist/madison11.txt : 
+loglikelihood for hamilton: -16311.7643291 
+loglikelihood for madison: -16208.3630028
+madison : True 
+
+excluding ./federalist/madison12.txt : 
+loglikelihood for hamilton: -19974.2779689 
+loglikelihood for madison: -19922.6416987
+madison : True 
+
+excluding ./federalist/madison13.txt : 
+loglikelihood for hamilton: -21677.9608113 
+loglikelihood for madison: -21183.8795604
+madison : True 
+
+excluding ./federalist/madison14.txt : 
+loglikelihood for hamilton: -14301.7787774 
+loglikelihood for madison: -14013.3977507
+madison : True 
+
+excluding ./federalist/madison15.txt : 
+loglikelihood for hamilton: -15949.1688223 
+loglikelihood for madison: -15870.8995218
+madison : True 
+
+excluding ./federalist/hamilton1.txt : 
+loglikelihood for hamilton: -15337.1117743 
+loglikelihood for madison: -15616.6459186
+hamilton : True 
+
+excluding ./federalist/hamilton2.txt : 
+loglikelihood for hamilton: -17350.0714278 
+loglikelihood for madison: -17662.2656322
+hamilton : True 
+
+excluding ./federalist/hamilton3.txt : 
+loglikelihood for hamilton: -15425.8432595 
+loglikelihood for madison: -15643.930638
+hamilton : True 
+
+excluding ./federalist/hamilton4.txt : 
+loglikelihood for hamilton: -15348.3729851 
+loglikelihood for madison: -15445.7657175
+hamilton : True 
+
+excluding ./federalist/hamilton5.txt : 
+loglikelihood for hamilton: -19325.7391134 
+loglikelihood for madison: -19733.1303462
+hamilton : True 
+
+excluding ./federalist/hamilton6.txt : 
+loglikelihood for hamilton: -16651.7014078 
+loglikelihood for madison: -16937.3279766
+hamilton : True 
+
+excluding ./federalist/hamilton7.txt : 
+loglikelihood for hamilton: -7302.18800225 
+loglikelihood for madison: -7389.7403282
+hamilton : True 
+
+excluding ./federalist/hamilton8.txt : 
+loglikelihood for hamilton: -23619.9066875 
+loglikelihood for madison: -23969.6429848
+hamilton : True 
+
+excluding ./federalist/hamilton9.txt : 
+loglikelihood for hamilton: -15580.2519107 
+loglikelihood for madison: -15806.1530676
+hamilton : True 
+
+excluding ./federalist/hamilton10.txt : 
+loglikelihood for hamilton: -12256.0108143 
+loglikelihood for madison: -12385.4814218
+hamilton : True 
+
+excluding ./federalist/hamilton11.txt : 
+loglikelihood for hamilton: -15448.1913755 
+loglikelihood for madison: -15656.0828753
+hamilton : True 
+
+excluding ./federalist/hamilton12.txt : 
+loglikelihood for hamilton: -26849.5307891 
+loglikelihood for madison: -27158.5257695
+hamilton : True 
+
+excluding ./federalist/hamilton13.txt : 
+loglikelihood for hamilton: -14384.850756 
+loglikelihood for madison: -14433.4748917
+hamilton : True 
+
+excluding ./federalist/hamilton14.txt : 
+loglikelihood for hamilton: -17042.3245869 
+loglikelihood for madison: -17196.0290538
+hamilton : True 
+
+excluding ./federalist/hamilton15.txt : 
+loglikelihood for hamilton: -11610.6231263 
+loglikelihood for madison: -11660.7936893
+hamilton : True 
+

@@ -1,0 +1,5 @@
+#!/bin/bash
+for i in {1..40}
+do
+	python ./frequentist.py `awk 'BEGIN{printf("%0.2f", '$i' * '0.25')}'` > ./cv-results-$i
+done	
